@@ -1,0 +1,1166 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  background-color: #e4edf4ff;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/* header */
+header {
+  width: 100%;
+  background-color: white;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  background: #0000;
+  border: none;
+  outline-offset: 2px;
+  transition: .25s;
+  appearance: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.header_container, .aside_for_mobileAndTablet, .article_detail, .footer_container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header_container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header_inner_right {
+  display: flex;
+}
+
+.header_nav_container {
+  height: 60px;
+  display: flex;
+}
+
+
+
+.header_nav_container ul {
+  display: flex;
+  align-items: center;
+  margin: 0px 0;
+}
+
+.header_nav_container li {
+  margin-left: 15px;
+  justify-content: end;
+}
+
+.zenn_logo a {
+  display: block;
+}
+
+.zenn_logo img {
+  width: 100px;
+  height: 25px;
+}
+
+.post_button {
+  display: none;
+
+}
+
+.post_button input {
+  width: 90px;
+  height: 36px;
+  background-color: #3ea8ff;
+  border: none;
+  font-weight: 900;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+
+}
+
+.search_icon svg, .bell_icon svg {
+  color: #65717b;
+}
+
+
+.search_icon svg:hover, .bell_icon svg:hover {
+  color: #2e2e2e;
+}
+
+.user_icon img, .user_icon_bottom img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+/* main */
+main {
+  background-color: #e4edf4ff;
+}
+
+.aside_for_mobileAndTablet {
+  width: 100%;
+  border-top: 1px solid #e4edf4;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.aside_container {
+  width: 90%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.zenn_user_icon {
+  display: flex;
+  width: 150px;
+  align-items: center;
+}
+
+.zenn_user_icon a {
+  color: #000;
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.zenn_user_icon img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user_icon_text {
+  display: block;
+  flex: 2;
+}
+
+.aside_nav_container {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.index {
+  height: 56px;
+  border: none;
+  background-color: white;
+  color: #385165;
+  font-size: 15px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+
+}
+
+.arrow_icon {
+  rotate: 180;
+  margin-left: 5px;
+}
+
+.like_button_container {
+  height: 56px;
+  display: flex;
+  align-items: center;
+
+}
+
+.like_button_outer {
+  background-color: #edf2f7;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like_button {
+  border: none;
+  display: block;
+
+}
+
+.like {
+  background-color: #edf2f7;
+
+}
+
+.article_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article_header svg {
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.article_header h1 {
+  font-size: 20px;
+  margin-left: 20px;
+
+}
+
+.article_header p {
+  margin-top: 20px;
+  color: #385165;
+  font-size: 13px;
+
+}
+
+.article_detail_wrapper {
+  border: 1px solid #5c93bb2b;
+  padding-bottom: 20px;
+}
+
+.article_category {
+  display: flex;
+}
+
+.category_zenn, .category_tech {
+  display: flex;
+  align-items: center;
+  border: 1px solid #5c93bb2b;
+  border-radius: 9999px;
+  width: auto;
+  padding: 0 7px;
+  font-size: 10px;
+  margin-right: 10px;
+
+}
+
+.category_zenn img, .category_tech svg {
+  width: 25px;
+  height: 25px;
+  mix-blend-mode: multiply;
+
+}
+
+
+
+.article_detail {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.article_detail_wrapper, .discussion_container {
+  width: 100%;
+  background-color: white;
+}
+
+.article_detail_inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.article_description {
+  padding-top: 20px;
+}
+
+.summary {
+  padding: 30px 0 40px 0;
+
+}
+
+.article_content_wrapper h1 {
+  border-bottom: 1px solid #5c93bb2b;
+  padding-bottom: 5px;
+}
+
+.article_content_wrapper h2 {
+  margin-top: 45px;
+  margin-bottom: 15px;
+
+
+}
+
+.article_content p {
+  margin-bottom: 15px;
+}
+
+.article_detail details {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid #5c93bb2b;
+  padding: 10px;
+}
+
+.article_content img {
+  margin-bottom: 20px;
+}
+
+.article_content a {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #3ea8ff;
+  font-weight: bold;
+}
+
+.GitHub_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #5c93bb2b;
+  border-radius: 10px;
+  width: 180px;
+  height: 40px;
+  margin-top: 20px;
+  box-shadow: 0 2px rgba(119, 136, 153, 0.2);
+}
+
+.GitHub_link a {
+  color: #000;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.GitHub_link svg {
+  margin-right: 5px;
+  color: #000;
+}
+
+hr {
+  width: 95%;
+  margin: auto;
+  border-top: 1px solid #5c93bb2b;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+}
+
+.action_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.action_inner_container {
+  display: flex;
+  align-items: center;
+}
+
+.like_count {
+  color: #8f9faa;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.arrow_icon_container {
+  margin-right: 10px;
+}
+
+.twitter_text {
+  color: #8f9faa;
+  font-size: 15px;
+}
+
+.twitter_link_outer {
+  border: 1px solid #5c93bb2b;
+  border-radius: 9999px;
+  padding: 0 15px;
+}
+
+.user_account_container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 5px 10px;
+}
+
+.user_account_container p {
+  margin: 0;
+}
+
+.user_account_top {
+  margin-bottom: 25px;
+}
+
+.user_icon_bottom {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_icon_bottom img {
+  margin: 0;
+  width: 55px;
+  height: 55px;
+
+}
+
+.user_info_text_bottom {
+  grid-column: 2;
+
+}
+
+.user_info_text {
+  color: #768189;
+  font-size: 14px;
+}
+
+.user_account_container .user_name {
+  color: #000;
+}
+
+.user_account_container .follow_text {
+  color: #65717b;
+}
+
+.GitHub_icon_link svg, .twitter_icon_link svg {
+  color: #65717b;
+}
+
+.user_info_wrapper p {
+  margin: 0;
+}
+
+.user_info_links .follow_text_outer {
+  border: 1px solid #65717b;
+  border-radius: 9999px;
+  padding: 5px 13px;
+  margin-right: 10px;
+}
+
+.follow_text_outer .follow_text {
+  padding: 0;
+}
+
+.user_info_wrapper p, .user_info_wrapper a {
+  color: #65717b;
+}
+
+.user_info_links {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+}
+
+.user_info_links a {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.user_info_links svg {
+  margin: 0 10px;
+}
+
+.user_info_wrapper .user_name {
+  color: #000;
+}
+
+.discussion_container_inner_top, .discussion_container_inner_bottom {
+  margin: 0 auto;
+}
+
+.discussion_container_inner_top {
+  width: 100%;
+  border-bottom: 1px solid #e4edf4;
+  padding-top: 40px;
+}
+
+.discussion_container_inner_bottom {
+  width: 90%;
+
+}
+
+.discussion_text {
+  display: flex;
+  justify-content: center;
+}
+
+.discussion_image_area img {
+  width: 60%;
+  margin: 30px auto;
+}
+
+
+
+.markdown_contents_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.markdown_contents_inner_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.markdown_button_outer {
+  background-color: #e6f2ff;
+  border-radius: 9999px;
+  width: 95px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+
+}
+
+.preview_button_outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+}
+
+.preview_button_outer button {
+  font-weight: bold;
+  color: #93a2ad;
+}
+
+.markdown_button_outer button {
+  color: #3ea8ff;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.guide_link {
+  display: none;
+}
+
+.discussion_comment {
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-bottom: 1px solid #e4edf4;
+  resize: none;
+  outline: none;
+}
+
+.discussion_comment::placeholder {
+  color: #93a2ad;
+}
+
+.markdown_action_button_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.markdown_action_inner_left {
+  display: flex;
+  align-items: center;
+}
+
+.image_button svg, .embedded_button svg, .embedded_button_text {
+  color: #93a2ad;
+}
+
+.image_button {
+  margin-right: 10px;
+}
+
+.embedded_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.embedded_button_text {
+  display: none;
+}
+
+.markdown_action_inner_right .post_button {
+  display: block;
+}
+
+.guide_line_container {
+  width: 90%;
+  margin: 10px auto 0;
+  display: flex;
+}
+
+.guide_line_container svg {
+  display: inline;
+  color: #8f9faa;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.guide_line_text span, .guide_line_text a {
+  font-size: 13px;
+  color: #8f9faa;
+
+
+}
+
+.guide_line_text {
+  margin: 0;
+}
+
+.guide_line_text a {
+  text-decoration: underline;
+}
+
+.recommend_articles_container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.recommend_article {
+  display: flex;
+  margin-top: 30px;
+}
+
+.article_image_wrapper {
+  background-color: white;
+  border-radius: 15px;
+  min-width: 80px;
+  min-height: 80px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+
+}
+
+.user_container {
+  display: flex;
+  align-items: center;
+}
+
+.user_container .user_icon {
+  display: flex;
+  align-items: center;
+}
+
+.user_container .user_icon img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.user_container .user_icon a {
+  font-size: 12px;
+}
+
+.update_date {
+  font-size: 13px;
+  padding-top: 3px;
+
+}
+
+.like_count svg {
+  background-color: #e4edf4ff;
+
+
+}
+
+.like_count {
+  display: flex;
+  padding-top: 3px;
+
+}
+
+.article_info_container {
+  display: none;
+}
+
+.aside_user_info_container {
+  display: none;
+}
+
+.inner_for_pc .side_button_container {
+  display: none;
+}
+
+.aside_index_container {
+  display: none;
+}
+
+/* footer */
+footer {
+  padding-top: 40px;
+  width: 100%;
+  background-color: white;
+}
+
+.footer_container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+}
+
+.zenn_logo {
+  grid-column: 1/3;
+  margin: 10px 0;
+}
+
+.zenn_logo p {
+  color: #93a5b1;
+  font-size: 13px;
+  height: 15px;
+
+}
+
+.zenn_logo br {
+  display: none;
+}
+
+.nav_wrapper {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+
+.footer_nav_container h4 {
+  font-size: 13px;
+  display: flex;
+}
+
+.footer_nav {
+  font-size: 13px;
+  padding-bottom: 40px;
+}
+
+nav.footer_nav ul {
+  padding-left: 0;
+}
+
+.footer_nav li {
+  color: #393939;
+  padding: 5px 0;
+}
+.class_method_icon {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #e4edf4;
+  display: flex;
+  justify-content: center;
+}
+
+.class_method_icon svg{
+  width: 120px;
+  height: 40px;
+
+}
+
+
+/* tablet */
+@media screen and (min-width:577px) {
+  .post_button {
+    display: block;
+  }
+
+  .article_detail_wrapper, .discussion_container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+
+  .user_icon_bottom img {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+
+  }
+
+  .user_account_container {
+    grid-template-rows: repeat(3, auto);
+    gap: 0 15px;
+  }
+
+  .user_icon_bottom {
+    grid-row: 1/3;
+  }
+
+  .user_info_links {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 10px;
+  }
+
+  .discussion_container {
+    border-top: 1px solid #e4edf4;
+    margin-top: 45px;
+  }
+
+  .guide_link {
+    display: block;
+  }
+
+  .guide_link a {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: #93a2ad;
+    font-size: 14px;
+  }
+
+  .guide_link a svg {
+    transform: rotate(-45deg);
+  }
+
+  .embedded_button_text {
+    display: block;
+  }
+
+
+  /* footer */
+  }
+
+@media screen and (min-width:768px) {
+  .article_header h1 {
+    font-size: 30px;
+  }
+
+  .recommend_articles_container {
+    width: 70%;
+    margin: 40px auto 0;
+    padding-bottom: 40px;
+
+  }
+
+  .recommend_articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .zenn_logo br {
+    display: block;
+  }
+
+  .footer_container {
+    display: flex;
+  }
+  .zenn_logo {
+    width: 200px;
+  }
+  
+  .nav_wrapper {
+    display: flex;
+    gap:80px;
+    ;
+  }
+ 
+
+}
+
+/* PC 992-1300px */
+@media screen and (min-width: 993px) {
+  .aside_for_mobileAndTablet {
+    display: none;
+  }
+
+  .inner_for_pc {
+    margin: 30px;
+    display: grid;
+    gap: 0 25px;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .article_header p {
+    display: none;
+
+  }
+
+  .article_detail_wrapper {
+    width: 100%;
+  }
+
+  .main_aside_container {
+    min-width: 310px;
+    width: 310px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+  }
+
+  .discussion_container {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .guide_line_container {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  .article_info_container, .aside_user_info_container, .aside_index_container {
+    display: block;
+    width: inherit;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .article_info_inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .article_info_inner span {
+    font-size: 13px;
+  }
+
+  .article_info_inner svg {
+    color: #768189;
+    margin-right: 5px;
+
+  }
+
+  .article_author_container, .release_date_container, .update_date_container, .update_date_container, .ammount_of_text_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+  }
+
+  .author_inner_right, .author_inner_left, .release_date_inner_left, .release_data_inner_right, .update_date_inner_left, .ammount_of_text_inner_left, .ammout_of_text_inner_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .article_author_container, .release_date_container, .update_date_container {
+    border-bottom: 1px solid #e4edf4;
+  }
+
+  .aside_GitHub_link {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .author_inner_left span, .release_date_inner_left span, .update_date_inner_left span, .ammount_of_text_inner_left span {
+
+    color: #385165;
+  }
+
+  .author_inner_right span, .release_data_inner_right span, .update_date_inner_right span, .ammout_of_text_inner_right span {
+    color: #000;
+  }
+
+  .update_date_inner_right svg {
+    color: #000;
+    margin-right: 5px;
+  }
+
+  .user_icon .aside_user_link {
+    display: flex;
+    align-items: center;
+  }
+
+  .aside_user_info_container {
+    margin: 20px 0;
+  }
+
+  .aside_user_info_inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 70px repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .aside_user_info_inner .user_icon {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+
+  .aside_user_info_inner .user_name_text {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .aside_user_info_inner .user_info_links {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .user_introduction {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+
+  .aside_user_info_inner img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  .aside_user_info_inner .user_name_text {
+    display: flex;
+    align-items: end;
+    font-weight: bold;
+  }
+
+  .aside_user_info_inner .user_info_links {
+    padding: 0;
+  }
+
+  .aside_user_info_inner .follow_text_outer {
+    padding: 2px 20px;
+  }
+
+  .aside_user_info_inner .user_info_links svg {
+    margin: 0 5px;
+  }
+
+  .aside_user_info_inner .follow_text_outer {
+    margin: 5px;
+  }
+  .aside_for_sticky {
+    position: sticky;
+    top:15px
+  }
+  .aside_index_container {
+    height: 250px;
+  }
+
+  .aside_index_inner {
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: grid;
+    grid-template-rows: 40px 150px;
+
+  }
+
+  .aside_index_inner .index_text {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin: 5px 0 0 5px;
+  }
+
+  .aside_index_inner .index {
+    display: grid;
+  }
+
+  .aside_index_inner ul {
+    padding-left: 25px;
+  }
+
+  .aside_index_inner li {
+    list-style: none;
+    line-height: 25px;
+    font-size: 12px;
+  }
+
+  .index .main_title {
+    color: #000;
+    font-size: 14px;
+  }
+
+
+}
+
+
+
+/* more than 1300px */
+@media screen and (min-width:1300px) {
+  .inner_for_pc {
+    grid-template-columns: repeat(3, auto);
+
+  }
+
+  .inner_for_pc .side_button_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side_button_container .like_button_container, .twitter_button_for_pc .twitter_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 90px;
+  }
+
+  .twitter_button_for_pc .twitter_text {
+    text-align: center;
+  }
+
+  .side_button_container .like_button_outer, .side_button_container .like_button_outer svg {
+    background-color: white;
+  }
+
+  .side_button_container span {
+    font-size: 13px;
+    color: #768189;
+  }
+
+  .side_button_container .like_button_outer {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  .twitter_button_for_pc .twitter_link .twitter_text {
+    font-size: 10px;
+    color: #768189;
+  }
+
+  .discussion_container {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .guide_line_container {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+
+}
