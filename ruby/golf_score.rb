@@ -30,4 +30,4 @@ difference_in_scores.each_with_index do |score, index|
     results << SCORE_NAME_OVER_ZERO[1]
   end
 end
-p results
+puts results.join(',')
