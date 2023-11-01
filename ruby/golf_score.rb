@@ -12,7 +12,7 @@ end
 
 results = []
 difference_in_scores.each_with_index do |score, index|
-  if score == -3 && scores_each_hole[index] == 1
+  if the_number_of_strokes_each_hole[index] != 5 && scores_each_hole[index] == 1
     results << HOLE_IN_ONE
     next
   end
@@ -21,7 +21,7 @@ difference_in_scores.each_with_index do |score, index|
   when -1, -2, -3, -4
     results << SCORE_NAME_UNDER_ZERO[score]
   when 0
-    results << SCORE_NAME_UNDER_ZERO[score]
+    results << SCORE_NAME_OVER_ZERO[score]
   when 1..nil
     if score > 1
       results << "#{score}#{SCORE_NAME_OVER_ZERO[1]}"
