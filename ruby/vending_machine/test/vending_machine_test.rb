@@ -10,7 +10,7 @@ class TestVendingMachine < Minitest::Test
   end
 
   def test_check_current_deposit
-    assert_equal 500, @suica.check_deposit
+    assert_equal 500, @suica.deposit
   end
 
   def test_check_success_top_up_suica
@@ -37,7 +37,7 @@ class TestVendingMachine < Minitest::Test
   def test_buy_juice
     @vending_machine.buy_drink('pepsi', @suica)
     assert_equal 4, @vending_machine.check_stocks('pepsi')
-    assert_equal 350, @suica.check_deposit
+    assert_equal 350, @suica.deposit
     assert_equal 150, @vending_machine.check_total_sales
   end
 

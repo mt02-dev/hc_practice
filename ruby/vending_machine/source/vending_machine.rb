@@ -41,13 +41,10 @@ class VendingMachine
     raise 'Sorry, out of stock.' if check_stocks(juice).zero?
 
     price = JUICE_LIST[:"#{juice}"]
-    if suica.check_deposit > price
-       suica.pay(price)
-       add_sales(price)
-       @stocks_list[:"#{juice}"].shift()
-    else
-      raise 'Insufficient deposit'
-    end
+    raise 'Insufficient deposit' if price > suica.deposit
+    suica.pay(price)
+    add_sales(price)
+    @stocks_list[:"#{juice}"].shift()
   end
 
   def display_juice_list

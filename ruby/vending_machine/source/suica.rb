@@ -1,10 +1,8 @@
 class Suica
+  attr_reader :deposit
+
   def initialize
     @deposit = 500
-  end
-
-  def check_deposit
-    @deposit
   end
 
   def top_up_deposit(price)
