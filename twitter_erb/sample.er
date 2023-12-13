@@ -1,5 +1,5 @@
 [users]
-  *user_id {label: "varchar, not null, uniq"}
+  *id {label: "varchar, not null, uniq"}
   user_name {label: "varchar, not null, uniq"}
   tel_number{label: "varchar, not null, uniq"}
   display_name{label: "varchar, not null"}
@@ -13,26 +13,20 @@
   updated_at { label: "datatime, not null"}
 
 [tweets]
-  *tweet_id {label: "bigint, not null, uniq"}
+  *id {label: "bigint, not null, uniq"}
   user_id {label: "varchar, not null FK(users)"}
   content {label: "varchar, not null"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
-[follows]
-  *user_id {label: "varchar, not null, uniq, FK(users)"}
-  *follow_user {label: "varchar, not null, uniq, FK(users)"}
-  created_at { label: "datatime, not null"}
-  updated_at { label: "datatime, not null"}
-
-[followers]
-  *user_id {label: "varchar, not null, uniq, FK(users)"}
-  *follower_user {label: "varchar, not null uniq, FK(users)"}
+[follows_follwers]
+  *followee_id {label: "varchar, not null, uniq, FK(users)"}
+  *follower_id {label: "varchar, not null, uniq, FK(users)"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
 [direct_messages]
-  *user_id {label: "varchar, not null, uniq, FK(users)"}
+  *from_user_id {label: "varchar, not null, uniq, FK(users)"}
   *to_user_id {label: "varchar, not null, uniq, FK(users)"}
   message {label: "varchar, not null"}
   created_at { label: "datatime, not null"}
@@ -45,8 +39,7 @@
   updated_at { label: "datatime, not null"}
 
 [retweets]
-  *retweet_id {label: "bigint, not null, uniq, FK(users)"}
-  retweet_user_id {label: "varchar, not null, uniq, FK(users)"}
+  *tweet_id {label: "bigint, not null, uniq, FK(tweets)"}
   user_id {label: "varchar, not null, uniq, FK(users)"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
@@ -58,7 +51,7 @@
   updated_at { label: "datatime, not null"}
 
 [event_types]
-  *event_type_id {label: "char, not null, uniq"}
+  *id {label: "char, not null, uniq"}
   event_name {label: "varchar, not null"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
@@ -77,8 +70,7 @@
 # 0 or more      *
 # 1 or more      +
 users 1--* tweets
-users 1--* follows
-users 1--* followers
+users 1--* follows_follwers
 users 1--* direct_messages
 users 1--* likes
 users 1--* retweets
