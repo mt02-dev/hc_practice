@@ -1,0 +1,81 @@
+[users]
+  *id {label: "varchar, not null, uniq"}
+  user_name {label: "varchar, not null, uniq"}
+  tel_number{label: "varchar, not null, uniq"}
+  display_name{label: "varchar, not null"}
+  profile{label: "varchar"}
+  place{label: "varchar"}
+  website{label: "varchar"}
+  birth_date{label: "date"}
+  profile_image{label: "varchar"}
+  avatar_image{label: "varchar"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[tweets]
+  *id {label: "bigint, not null, uniq"}
+  user_id {label: "varchar, not null FK(users)"}
+  content {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[follows_follwers]
+  *followee_id {label: "varchar, not null, uniq, FK(users)"}
+  *follower_id {label: "varchar, not null, uniq, FK(users)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[direct_messages]
+  *from_user_id {label: "varchar, not null, uniq, FK(users)"}
+  *to_user_id {label: "varchar, not null, uniq, FK(users)"}
+  message {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[likes]
+  *user_id {label: "varchar, not null, uniq, FK(users)"}
+  *tweet_id {label: "bigint, not null, uniq, FK(tweets)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[retweets]
+  *tweet_id {label: "bigint, not null, uniq, FK(tweets)"}
+  user_id {label: "varchar, not null, uniq, FK(users)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[bookmarks]
+  *user_id {label: "varchar, not null, uniq, FK(user)"}
+  *tweet_id {label: "bigint, not null, uniq, FK(tweets)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[event_types]
+  *id {label: "char, not null, uniq"}
+  event_name {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[notices]
+  *user_id {label: "varchar, not null, uniq, FK(users)"}
+  *tweet_id {label: "bigint, not null, uniq, FK(tweets)"}
+  event_type_id {label: "char, not null, uniq FK(event_types)"}
+  notice_flag {label: "boolean, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+# Cardinality    Syntax
+# 0 or 1         ?
+# exactly 1      1
+# 0 or more      *
+# 1 or more      +
+users 1--* tweets
+users 1--* follows_follwers
+users 1--* direct_messages
+users 1--* likes
+users 1--* retweets
+users 1--* bookmarks
+users 1--* notices
+tweets 1--* likes
+tweets 1--* bookmarks
+event_types 1--* notices
